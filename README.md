@@ -151,6 +151,6 @@ The Last Mile Delivery Tracker uses a **zone-based delivery system** to automate
 
 ## Screenshots
 
-![Landing Page](assets/landing page.png)
-![Agent Dashboard](assets/agent dasboard page.png)
-![Tracking page](assets/tracking page.png)
+![Landing Page](assets/agentDasboardpage.png)
+![Agent Dashboard](assets/landingPage.png)
+![Tracking page](assets/trackingPage.png)
