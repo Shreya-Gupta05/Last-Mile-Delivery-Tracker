@@ -11,11 +11,13 @@ const rateCardRoutes = require("./routes/rateCardRoutes");
 const app = express();
 
 // Middleware FIRST
-app.use(cors(
-    {
-        origin: "http://localhost:5173"
-    }
-));
+app.use(cors({
+    origin: [
+      "http://localhost:5173",
+      "https://last-mile-delivery-tracker-frontend-9ago.onrender.com"
+    ],
+    credentials: true
+  }));
 app.use(express.json());
 
 app.use((req, res, next) => {
