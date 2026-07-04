@@ -27,12 +27,26 @@ const createOrder = async (req, res) => {
         const billableWeight = Math.max(actualWeight, volumetricWeight);
 
         // Get Rate Card
-        const rate = await RateCard.findOne({
+        // const rate = await RateCard.findOne({
+        //     pickupZone,
+        //     dropZone,
+        //     orderType
+        // });
+
+        console.log("Request values:", {
             pickupZone,
             dropZone,
             orderType
-        });
-
+          });
+          
+          const rate = await RateCard.findOne({
+            pickupZone,
+            dropZone,
+            orderType
+          });
+          
+          console.log("Rate found:", rate);
+          
         if (!rate) {
             return res.status(400).json({
                 message: "Rate card not found"
@@ -47,7 +61,7 @@ const createOrder = async (req, res) => {
         if (paymentType === "COD") {
             totalCharge += rate.codCharge;
         }
-
+        
         // Auto Assign Agent
         const agent = await User.findOne({
             role: "agent",
