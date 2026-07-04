@@ -5,7 +5,6 @@ require("dotenv").config();
 
 const authRoutes = require("./routes/authRoutes");
 const orderRoutes=require("./routes/orderRoutes");
-// const statusRoutes=require("./routes/statusRoutes");
 const trackingRoutes = require("./routes/trackingRoutes");
 const rateCardRoutes = require("./routes/rateCardRoutes");
 
@@ -26,7 +25,6 @@ app.use((req, res, next) => {
 // Routes 
 app.use("/api/auth", authRoutes);
 app.use("/api/orders",orderRoutes);
-// app.use("/api/status",statusRoutes);
 app.use("/api/tracking", trackingRoutes);
 app.use("/api/ratecard", rateCardRoutes);
 
