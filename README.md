@@ -148,3 +148,9 @@ The Last Mile Delivery Tracker uses a **zone-based delivery system** to automate
 - Faster deliveries through zone-based allocation
 - Transparent delivery tracking
 - Scalable architecture for future enhancements
+
+  ## Screenshots
+
+![Landing Page](assets/landing page.png)
+![Agent Dashboard](assets/agent dasboard page.png)
+![Tracking page](assets/tracking page.png)
