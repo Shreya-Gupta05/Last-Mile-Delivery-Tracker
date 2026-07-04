@@ -123,4 +123,28 @@ Maximum(actualWeight, volumetricWeight)
 Base Charge + (Chargeable Weight × Rate per kg)
 ```
 
-The application automatically calculates the chargeable weight and delivery charge while creating an order.
+The application automatically calculates the chargeable weight and delivery charge while creating an order.              
+
+## System Design
+
+The Last Mile Delivery Tracker uses a **zone-based delivery system** to automate order assignment and tracking.
+
+### Zone Detection
+- Pickup and drop addresses are mapped to predefined delivery zones.
+- Zones help organize deliveries and reduce travel time.
+
+### Auto-Assignment Logic
+- The system automatically finds an available delivery agent in the pickup zone.
+- The selected agent is assigned to the order.
+- Order status changes to **Assigned**, and a tracking record is created.
+
+### Failed Delivery Handling
+- If delivery fails, the order status is updated to **Failed Delivery**.
+- The failure reason is stored in the tracking history.
+- Admins can review failed orders and reassign or reschedule them if needed.
+
+### Benefits
+- Automated agent assignment
+- Faster deliveries through zone-based allocation
+- Transparent delivery tracking
+- Scalable architecture for future enhancements
